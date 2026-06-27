@@ -1,7 +1,7 @@
 # 🏗️ terraform-vsphere-rhel9-automation
 
 > **Terraform + Ansible integration for automated RHEL 9 VM provisioning on VMware vSphere**  
-> Clone a RHEL 9 template, provision one or many VMs, and automatically trigger Ansible hardening — all from a single `terraform apply`.
+> Clone a RHEL 9 template, provision one or many VMs, and automatically trigger Ansible hardening all from a single `terraform apply` command.
 
 [![Terraform](https://img.shields.io/badge/Terraform-%3E%3D1.5.0-7B42BC?logo=terraform)](https://www.terraform.io/)
 [![vSphere Provider](https://img.shields.io/badge/vSphere_Provider-~%3E2.6-blue?logo=vmware)](https://registry.terraform.io/providers/hashicorp/vsphere/latest)
@@ -10,6 +10,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 ---
+<img width="975" height="426" alt="image" src="https://github.com/user-attachments/assets/f4264cfc-33d0-4543-ba2b-3632989d0abc" />
 
 ## 📋 Table of Contents
 
@@ -68,22 +69,22 @@ VM is hardened and configured — fully hands-free
 │                                                             │
 │  terraform apply                                            │
 │       │                                                     │
-│       ▼  vSphere API (HTTPS/443)                           │
+│       ▼  vSphere API (HTTPS/443)                            │
 ├─────────────────────────────────────────────────────────────┤
-│  VMware ESXi Host (192.168.198.X)                           │
+│  VMware ESXi Host (192.168.198.45)                          │
 │  vCenter/vSphere                                            │
 │                                                             │
-│  ┌──────────────┐    clone    ┌──────────────────────┐     │
-│  │ RHEL9-Template│ ─────────► │ rhel9-lab-01         │     │
-│  │ (template)   │            │ rhel9-lab-02  etc.   │     │
-│  └──────────────┘            └──────────┬───────────┘     │
-│                                         │ IP assigned      │
+│  ┌───────────────┐    clone    ┌──────────────────────┐     │
+│  │ RHEL9-Template│ ─────────►  │ rhel9-lab-01         │     │
+│  │ (template)    │             │ rhel9-lab-02         │     │
+│  └───────────────┘             └──────────┬───────────┘     │
+│                                         │ IP assigned       │
 ├─────────────────────────────────────────┼───────────────────┤
 │  RHEL 9 Ansible Control Node            │                   │
 │  (192.168.198.134)                      │                   │
 │  ansible_svc user                       │                   │
 │                                         ▼                   │
-│  ansible-playbook site.yml ──────► new VM hardened         │
+│  ansible-playbook site.yml ──────► new VM hardened          │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -160,8 +161,8 @@ C:\terraform\vsphere-starter\
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/terraform-vsphere-rhel9-automation.git
-cd terraform-vsphere-rhel9-automation
+git clone https://github.com/ramawahyuk/Terraform-vSphere.git
+cd Terraform-vSphere
 ```
 
 ### 2. Copy and Edit tfvars
@@ -377,5 +378,5 @@ MIT License — see [LICENSE](LICENSE) for details.
 ---
 
 <p align="center">
-  Part of a home lab Infrastructure as Code series — Terraform + Ansible + vSphere
+  Part of a my home lab Infrastructure as Code series — Terraform + Ansible + vSphere
 </p>
