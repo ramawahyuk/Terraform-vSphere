@@ -1,4 +1,4 @@
-# 🏗️ terraform-vsphere-rhel9-automation
+# 🏗️ Terraform-vsphere-rhel9-automation
 
 > **Terraform + Ansible integration for automated RHEL 9 VM provisioning on VMware vSphere**  
 > Clone a RHEL 9 template, provision one or many VMs, and automatically trigger Ansible hardening all from a single `terraform apply` command.
